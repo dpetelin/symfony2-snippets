@@ -1,7 +1,7 @@
 Controller
 
 ```php
-$dispatcher->dispatch(
+$this->get('event_dispatcher')->dispatch(
     AppEvents::NOTIFICATION_ANSWER_FOR_COMMENT,
     new CommentEvent(
         $this->getUser(),
