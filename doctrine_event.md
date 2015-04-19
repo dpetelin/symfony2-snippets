@@ -23,3 +23,23 @@ public function onFlush(OnFlushEventArgs $args)
     }
 }
 ```
+```xml
+<service id="app.event_listener.file_listener" class="AppBundle\EventListener\FileListener">
+    <tag name="doctrine.event_listener" event="preRemove"/>
+</service>
+```
+
+```php
+/**
+ * @param LifecycleEventArgs $args Event arguments
+ */
+public function preRemove(LifecycleEventArgs $args)
+{
+    $entity = $args->getObject();
+
+    if ($entity instanceof Photo) {
+        $file = $entity->getFile();
+        $file->delete();
+    }
+}
+```
