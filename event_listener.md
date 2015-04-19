@@ -1,4 +1,4 @@
-doc: [a How to Create an Event Listener](http://symfony.com/doc/2.3/cookbook/service_container/event_listener.html)
+doc: [How to Create an Event Listener](http://symfony.com/doc/2.3/cookbook/service_container/event_listener.html)
 
 ```xml
 <service id="app.event_listener.domain_listener" class="AppBundle\EventListener\DomainListener">
