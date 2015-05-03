@@ -31,7 +31,9 @@ class Feature
     // ...
     /**
      * @ManyToOne(targetEntity="Product", inversedBy="features")
-     * @JoinColumn(name="product_id", referencedColumnName="id", onDelete="CASCADE")
+     * @JoinColumn(name="product_id", referencedColumnName="id", 
+     * onDelete="CASCADE"
+     * )
      **/
     private $product;
     
