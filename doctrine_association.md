@@ -5,8 +5,8 @@ class Product
 {
     /**
      * @OneToMany(targetEntity="Feature", mappedBy="product", 
-        cascade={"persist"}, orphanRemoval=true
-        )
+     *   cascade={"persist"}, orphanRemoval=true
+     *   )
      **/
     private $features;
 
